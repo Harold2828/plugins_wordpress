@@ -140,7 +140,7 @@ class Custom_Table_Example_List_Table extends WP_List_Table
         );
 
         return sprintf('%s %s',
-            $item['nombre'],
+            $item['name'],
             $this->row_actions($actions)
         );
     }
@@ -162,7 +162,7 @@ class Custom_Table_Example_List_Table extends WP_List_Table
             'description'  => __('Descripcion', 'wpbc'),
             'image' => __('Url','wpbc'),
             'ocultar'=>__('Ocultar/Mostrar','wpbc'),
-            'promocion'=>__('promocion','wpbc'),
+            'promocion'=>__('Promocion','wpbc'),
             //'promocion'=>__('promocion','wpbc'),
             // 'imagen'     => __('Imagen', 'wpbc'),
             
@@ -175,11 +175,11 @@ class Custom_Table_Example_List_Table extends WP_List_Table
     {
         $sortable_columns = array(
             'id'      => array('id', true),
-            'name' => array('nombre',true),
-            'description'  => array('descripcion', true),
+            'name' => array('name',true),
+            'description'  => array('description', true),
             'image' => array('image',true),
             'promocion'=> array('promocion',true),
-            'ocultar'=>array('url',true),
+            'ocultar'=>array('ocultar',true),
             //'importancia'=>array('importancia',true),
             // 'imagen'     => array('imagen', true),
         );

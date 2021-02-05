@@ -160,15 +160,6 @@ function wpbc_contacts_form_meta_box_handler($item)
         <div id="showimage"></div>
 
 		</div> 
-		
-        <div class="form2bc"> 
-		<p>
-      <p>	  
-            <label for="ocultar"><?php _e('¿ Es visible ?:', 'wpbc')?></label> 
-		<br>
-			<input id="image" name="image" type="text" value="<?php echo esc_attr($item['image'])?>">
-		</p>
-		</div>
 		<!--Paquete de promocion-->
         <div class="form2bc">
             <label for="">Promoción</label>
@@ -187,12 +178,6 @@ function wpbc_contacts_form_meta_box_handler($item)
             </select>
             <br>
 		</div>	
-        <!--Paquete , imagen-->
-        <div class="form2bc">
-            <label for="">Imagen</label>
-            <input type="file" accept="image/*" name="imagen" placeholder="" id="imagen" class="form-control-file" >
-            <br>   
-        </div>
         
 		</form>
 		</div>
