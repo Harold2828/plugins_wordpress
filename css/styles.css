@@ -27,3 +27,12 @@ div.form3bc input {
 #notesbc {
     width: 730px;
 }
+
+#showimage
+{
+place-self: center;
+}
+.tiny
+{
+    width: 30%;
+}

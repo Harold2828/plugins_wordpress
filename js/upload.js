@@ -22,6 +22,7 @@ jQuery(document).ready(function($){
 	  mediaUploader.on('select', function() {
 			attachment = mediaUploader.state().get('selection').first().toJSON();
 			$('#image').val(attachment.url);
+            $('#showimage').html('<img class="tiny" src='+attachment.url+'>');
 		});
 
 	  // Open the uploader dialog
