@@ -8,7 +8,7 @@ function wpbc_contacts_page_handler()
 
     $message = '';
     if ('delete' === $table->current_action()) {
-        $message = '<div class="updated below-h2" id="message"><p>' . sprintf(__('Items deleted: %d', 'wpbc'), count($_REQUEST['id'])) . '</p></div>';
+        $message = '<div class="updated below-h2" id="message"><p>' . sprintf(__('se borró el banner: %d', 'wpbc'), $_REQUEST['id']) . '</p></div>';
     }
     ?>
 <div class="wrap">
