@@ -153,8 +153,8 @@ function wpbc_contacts_form_meta_box_handler($item)
             <label for="image"><?php _e('imagen:', 'wpbc')?></label> 
 		<br> 
        
-		<input id="upload-button" type="button" class="button" value="Upload Image" />
-        <input id="image" type="text" name="image"   value="<?php echo esc_attr($item['image'])?>"/>
+		<input id="upload-button" type="button" class="button" value="Upload Image"  />
+        <input id="image" type="text" name="image"   value="<?php echo esc_attr($item['image'])?> " style="border:none;display: block;"/>
 
         </p>
 		</div> 
