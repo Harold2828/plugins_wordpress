@@ -232,7 +232,7 @@ class Custom_Table_Example_List_Table extends WP_List_Table
         $order = (isset($_REQUEST['order']) && in_array($_REQUEST['order'], array('asc', 'desc'))) ? $_REQUEST['order'] : 'asc';
 
 
-        $this->items = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name ORDER BY $orderby $order LIMIT %d OFFSET %d", $per_page, $paged), ARRAY_A);
+        $this->items = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name ORDER BY name LIMIT %d OFFSET %d", $per_page, $paged), ARRAY_A);
 
 
         $this->set_pagination_args(array(
