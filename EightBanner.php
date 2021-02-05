@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Banner para mercado repuesto
 * Description: Este plugin esta elaborado para mercado respuesto, ideal para crear banners.
-* Version:     1.0
+* Version:     1.5
 * Plugin URI: https://www.eaigtha.com
 * Author:      Code8a
 * Author URI: https://www.eaigtha.com
@@ -158,10 +158,11 @@ class Custom_Table_Example_List_Table extends WP_List_Table
     {
         $columns = array(
             'cb' => '<input type="checkbox" />', 
-            'nombre'      => __('Nombre', 'wpbc'),
-            'descripcion'  => __('Descripcion', 'wpbc'),
-            'url' => __('Url','wpbc'),
+            'name'      => __('Nombre', 'wpbc'),
+            'description'  => __('Descripcion', 'wpbc'),
+            'image' => __('Url','wpbc'),
             'ocultar'=>__('Ocultar/Mostrar','wpbc'),
+            'promocion'=>__('promocion','wpbc'),
             //'promocion'=>__('promocion','wpbc'),
             // 'imagen'     => __('Imagen', 'wpbc'),
             
@@ -174,9 +175,10 @@ class Custom_Table_Example_List_Table extends WP_List_Table
     {
         $sortable_columns = array(
             'id'      => array('id', true),
-            'nombre' => array('nombre',true),
-            'descripcion'  => array('descripcion', true),
-            'url'=> array('url',true),
+            'name' => array('nombre',true),
+            'description'  => array('descripcion', true),
+            'image' => array('image',true),
+            'promocion'=> array('promocion',true),
             'ocultar'=>array('url',true),
             //'importancia'=>array('importancia',true),
             // 'imagen'     => array('imagen', true),

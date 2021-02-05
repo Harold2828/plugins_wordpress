@@ -15,7 +15,7 @@ function wpbc_contacts_page_handler()
 
     <div class="icon32 icon32-posts-post" id="icon-edit"><br></div>
     <h2><?php _e('Mis banner', 'wpbc')?> <a class="add-new-h2"
-                                 href="<?php echo get_admin_url(get_current_blog_id(), 'admin.php?page=contacts_form');?>"><?php _e('NuevoContacto', 'wpbc')?></a>
+                                 href="<?php echo get_admin_url(get_current_blog_id(), 'admin.php?page=contacts_form');?>"><?php _e('Nuevo Banner', 'wpbc')?></a>
     </h2>
     <?php echo $message; ?>
 
@@ -43,7 +43,8 @@ function wpbc_contacts_form_page_handler()
         'name'      => '',
         'description'  => '',
         'image'     => '',
-        'ocultar' => 'si',
+        'promocion' =>'',
+        'ocultar' => '',
     );
 
 
@@ -57,17 +58,17 @@ function wpbc_contacts_form_page_handler()
                 $result = $wpdb->insert($table_name, $item);
                 $item['id'] = $wpdb->insert_id;
                 if ($result) {
-                    $message = __('Item was successfully saved', 'wpbc');
+                    $message = __('El Banner se cargó correctamente', 'wpbc');
                 } else {
-                    $notice = __('There was an error while saving item', 'wpbc');
+                    $notice = __('Hubo un error mientras se guardaba el Banner', 'wpbc');
                     print($result);
                 }
             } else {
                 $result = $wpdb->update($table_name, $item, array('id' => $item['id']));
                 if ($result) {
-                    $message = __('Item was successfully updated', 'wpbc');
+                    $message = __('El Banner se actualizó correctamente', 'wpbc');
                 } else {
-                    $notice = __('There was an error while updating item', 'wpbc');
+                    $notice = __('Hubo un error mientras se actualizaba el Banner', 'wpbc');
                 }
             }
         } else {
@@ -155,21 +156,44 @@ function wpbc_contacts_form_meta_box_handler($item)
 			<input id="image" name="image" type="text" value="<?php echo esc_attr($item['image'])?>">
 		</p>
 		</div>
-		
+		<!--Paquete de promocion-->
         <div class="form2bc">
-		<p>
-      <p>	  
-            <label for="ocultar"><?php _e('¿ Es visible ?:', 'wpbc')?></label> 
-		<br>
-        <!-- select-->
-			<input id="ocultar" name="ocultar" type="text" value="<?php echo esc_attr($item['ocultar'])?>">
-		</p>
+            <label for="">Promoción</label>
+            <select id="promocion" name='promocion'>
+            <option value='Mostrar'>Promocionar</option>
+            <option value='Ocultar'>No promocionar</option>
+            </select>
+            <br>
 		</div>	
-        <!--campo promocion -->
-        
+        <!--Paquete de ocultar-->
+        <div class="form2bc">
+            <label for="">Ocultar</label>
+            <select id="ocultar" name='ocultar'>
+            <option value='Mostrar'>Sí</option>
+            <option value='Ocultar'>No</option>
+            </select>
+            <br>
+		</div>	
+        <!--Paquete , imagen-->
+        <div class="form2bc">
+            <label for="">Imagen</label>
+            <input type="file" accept="image/*" name="imagen" placeholder="" id="imagen" class="form-control-file" >
+            <br>   
+        </div>
         
 		</form>
 		</div>
 </tbody>
 <?php
 }
+/*
+<!--
+    Listar los banner           x 
+    Cambiar contacto por banner x
+    Nuevo banner *
+
+    Los botones ocultar         x
+                /promocion      x
+                /imagen
+    --->
+    */
