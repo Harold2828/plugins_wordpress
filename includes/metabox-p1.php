@@ -130,7 +130,7 @@ function wpbc_contacts_form_meta_box_handler($item)
 		
 	<div class="formdatabc">		
 		
-    <form >
+    <form enctype="multipart/form-data">
 		<div class="form2bc">
         <p>			
 		    <label for="name"><?php _e('Nombre del banner', 'wpbc')?></label>
@@ -151,12 +151,14 @@ function wpbc_contacts_form_meta_box_handler($item)
 		<p>
       <p>	  
             <label for="image"><?php _e('image:', 'wpbc')?></label> 
-		<br>
-			<input id="image" name="image" type="text" value="<?php echo esc_attr($item['image'])?>">
-		</p>
-		</div>
+		<br> 
+        <input id="image" type="text" name="image"   value="<?php echo esc_attr($item['image'])?>"/>
+		<input id="upload-button" type="button" class="button" value="Upload Image" />
 		
-        <div class="form2bc">
+        </p>
+		</div> 
+		
+        <div class="form2bc"> 
 		<p>
       <p>	  
             <label for="ocultar"><?php _e('¿ Es visible ?:', 'wpbc')?></label> 
@@ -171,5 +173,8 @@ function wpbc_contacts_form_meta_box_handler($item)
 		</form>
 		</div>
 </tbody>
+
+
 <?php
 }
+
