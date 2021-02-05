@@ -151,7 +151,23 @@ function wpbc_contacts_form_meta_box_handler($item)
 		<div class="form2bc">
 		<p>
       <p>	  
+<<<<<<< HEAD
             <label for="image"><?php _e('image:', 'wpbc')?></label> 
+=======
+            <label for="image"><?php _e('imagen:', 'wpbc')?></label> 
+		<br> 
+       
+		<input id="upload-button" type="button" class="button" value="Upload Image"  />
+        <input id="image" type="text" name="image"   value="<?php echo esc_attr($item['image'])?> " style="border:none;display: block;"/>
+
+        </p>
+		</div> 
+		
+        <div class="form2bc"> 
+		<p>
+      <p>	  
+            <label for="ocultar"><?php _e('¿ Es visible ?:', 'wpbc')?></label> 
+>>>>>>> 9dbd11536ffc2f2bae3fe5a47ac16d47eeb50698
 		<br>
 			<input id="image" name="image" type="text" value="<?php echo esc_attr($item['image'])?>">
 		</p>
